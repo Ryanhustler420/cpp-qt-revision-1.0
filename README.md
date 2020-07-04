@@ -1,0 +1,1 @@
+# cpp-qt-revision-1.0
