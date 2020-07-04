@@ -26,6 +26,26 @@ Widget::Widget(QWidget *parent)
             ui->label->setText("Lambda Called");
         });
     */
+
+    // using 1st way. String Notation
+    /*
+        connect(ui->horizontalSlider, SIGNAL(valueChanged(int)),
+                ui->progressBar, SLOT(setValue(int)));
+    */
+
+    // using 2nd way. Normal Slots
+    /*
+        connect(ui -> horizontalSlider, &QSlider::valueChanged, ui->progressBar,
+                &QProgressBar::setValue);
+    */
+
+    // using 3rd way. Functor Notation
+    /*
+        connect(ui ->horizontalSlider, &QSlider::valueChanged, [=](int val){
+           ui->progressBar->setValue(val);
+           // ui->progressBar->setValue(ui->horizontalSlider->value()); works same as above live
+        });
+    */
 }
 
 Widget::~Widget()
