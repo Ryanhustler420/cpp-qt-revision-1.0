@@ -58,4 +58,3 @@ void Widget::changeText()
     qDebug() << "User clicked on button" << endl;
     ui->label->setText("Hello There");
 }
-
